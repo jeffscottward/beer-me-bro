@@ -1,0 +1,15 @@
+#burst {
+  -webkit-animation-name: rotate1;
+  -webkit-animation-duration: 120s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate1 {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
