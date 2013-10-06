@@ -1,0 +1,45 @@
+.bubbles-container {
+	width: 240px;
+	height: 45%;
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	bottom: 55%;
+	margin-left: -120px;
+}
+
+.bubble {
+	background: #fff;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	display: block;
+	left: 25%;
+	bottom: 0;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	background: white;
+	-webkit-animation: bubbleFloat1 4s ease-in-out 0s infinite;
+	-moz-animation: bubbleFloat1 4s ease-in-out 0s infinite;
+	-ms-animation: bubbleFloat1 4s ease-in-out 0s infinite;
+	-o-animation: bubbleFloat1 4s ease-in-out 0s infinite;
+	&.bubble-2{
+		display: none;
+		-webkit-animation: bubbleFloat1 1s infinite;
+	}
+}
+
+// Bubble float
+@-webkit-keyframes bubbleFloat1{
+	0%{
+		opacity: 1; 
+		-webkit-transform: scale(.1) translateY(0);
+	}
+	100% {
+		-webkit-transform:scale(1) translateY(-600px);
+		opacity:0;
+	}
+}

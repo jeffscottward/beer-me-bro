@@ -13,14 +13,16 @@ html.no-js
     body
       canvas#burst
       header.header(role='banner')
+      main.main(role='main')
+        .bubbles-container
+          i = 1
+          - while (i <= 3)
+            span.bubble(class='bubble-#{i}')
+            - i++
         .logo
           a(href='/')
-            img(src='assets/img/beer-me-bro-logo.svg', alt='Logo')
-        nav.nav(role='navigation')
-          ul
-            li
-              a(href='/')
-        #buttons
+            img(src='assets/img/beer-me-bro-logo.svg', alt='Logo')        
+        #buttons.bounceInUp
           .facebook.button
             i.icon
               i.icon-facebook
@@ -39,15 +41,13 @@ html.no-js
             .slide
               p
                 | google+
-
-      main.main(role='main')
       aside.sidebar(role='complementary')
       footer.footer(role='contentinfo')
       script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
-      script
+      script.
         window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.2.min.js"><\\/script>');
       script(src='assets/js/scripts.min.js')
-      script
+      script.
         (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
         (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
         l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)

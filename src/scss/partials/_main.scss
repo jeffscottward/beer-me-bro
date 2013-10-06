@@ -1,3 +1,27 @@
 .main {
 
 }
+
+.logo {
+	display: block;
+	position: relative;
+	top: 50%;
+	width: 320px;
+	height: 50px;
+	margin: auto;
+
+	a{
+		width: 100%;
+		height: 100%;
+		display: block;
+		margin: auto;
+	}
+	
+	img {
+		display: block;
+		max-width: 100%;
+		height: 100%;
+		background: black;
+		margin: auto;
+	}
+}

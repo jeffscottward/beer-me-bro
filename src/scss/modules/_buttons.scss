@@ -1,40 +1,30 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400);
-
 @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
 
-html, body {
-    min-height: 100%;
-}
-
-body {
-    background-image: linear-gradient(45deg, rgba(194, 233, 221, 0.5) 1%, rgba(104, 119, 132, 0.5) 100%), linear-gradient(-45deg, #494d71 0%, rgba(217, 230, 185, 0.5) 80%);
-    margin: 0;
-}
-
 #buttons {
-    border-radius: 5px;
-    padding: 14px 7px;
+    margin: auto; 
+    width: 240px;
+    padding: 20px 0;
+    position: relative;
     background: white;
-    width: 660px;
-    overflow: hidden;
-    margin: 150px auto 0;
-    box-shadow:0 2px 3px rgba(71, 71, 71, 0.31);
+    border-radius: 20px;
+    position: relative;
+    top: 55%;
 }
-
 
 .button {
     background: #DCE0E0;
     position: relative;
     display: block;
     height: 40px;
-    margin: 0 0 20px 0;
+    margin: 0 auto 20px auto;
     overflow: hidden;
     width: 200px;
-    border-radius: 3px;
-    -o-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 }
 
 .icon {
@@ -45,7 +35,6 @@ body {
     height: 100%;
     vertical-align: top;
     width: 38px;
-    border-radius: 5px 0px 0px 5px;
     text-align: center;
 }
 
@@ -62,7 +51,6 @@ body {
     left: 38px;
     position: absolute;
     width: 100%;
-    border-radius: 0px 5px 5px 0px;
 }
 
 .slide p {

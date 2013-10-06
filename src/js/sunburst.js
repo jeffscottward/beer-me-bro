@@ -51,10 +51,10 @@ var Sunburst = (function() {
 var init = function(){
 	var canvas = document.getElementById('burst');
 	canvas.width = document.body.clientWidth * 2;
-	canvas.height = document.body.clientHeight * 2;
+	canvas.height = document.body.clientHeight * 3;
 	canvas.style.position = 'fixed';
 	canvas.style.left = -(document.body.clientWidth/2) + 'px';
-	canvas.style.top = -(document.body.clientHeight/2) + 'px';
+	canvas.style.top = -(document.body.clientHeight) + 'px';
 
 	Sunburst.Draw(canvas,{
 	  bars: 24,
@@ -62,11 +62,11 @@ var init = function(){
 	  color: 'rgba(253, 236, 0, 1.0)',
 	  backcolor: 'rgba(238, 114, 0, 1.0)'
 	});
-}
+};
 
 init();
 
 window.onresize = function(){
 	init();
-}
+};
 
