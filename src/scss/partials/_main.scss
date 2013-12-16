@@ -5,10 +5,9 @@
 .logo {
 	display: block;
 	position: relative;
-	top: 50%;
-	width: 320px;
-	height: 50px;
+	max-width: 320px;
 	margin: auto;
+	padding-bottom: 20px;
 
 	a{
 		width: 100%;
@@ -20,8 +19,32 @@
 	img {
 		display: block;
 		max-width: 100%;
-		height: 100%;
-		background: black;
+		max-height: 200px;
 		margin: auto;
+		position: relative;
 	}
+	.mug-1{
+		position: absolute;
+		left: 0px;
+		@include vendor(transform,scaleX(-1) rotate(-20deg));
+	}
+	.mug-2{
+		right: -80px;
+		@include vendor(transform,rotate(-20deg));
+	}
+}
+
+
+.app-title {
+	position: relative;
+	z-index: 100;
+	font-size: 60px;
+  max-width: 320px;
+  margin: auto;
+  text-align: center;
+  font-family:'collegiate';
+  color: white;
+  line-height: 50px;
+  padding: 20px 0 0 0;
+  //height: 0;
 }
