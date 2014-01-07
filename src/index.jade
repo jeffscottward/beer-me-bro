@@ -1,58 +1,58 @@
 !!! 5
 html.no-js
   head
-      meta(charset='utf-8')
-      title FireShell by @toddmotto
-      meta(http-equiv='X-UA-Compatible', content='IE=edge')
-      meta(name='description', content='')
-      meta(name='viewport', content='width=device-width,initial-scale=1')
-      link(href='//www.google-analytics.com', rel='dns-prefetch')
-      link(href='//ajax.googleapis.com', rel='dns-prefetch')
-      link(href='assets/css/style.min.css', rel='stylesheet')
-      script(src='assets/js/vendor/modernizr-2.6.2.min.js')
-    body
-      canvas#burst
-      header.header(role='banner')
-      main.main(role='main')
-        .bubbles-container
-          i = 1
-          - while (i <= 3)
-            span.bubble(class='bubble-#{i}')
-            - i++
-        p.app-title BEER ME BRO
-        .logo
-          a(href='/')
-            img(class="mug mug-1", src='assets/img/beer_mug.png', alt='Logo')
-            img(class="mug mug-2", src='assets/img/beer_mug.png', alt='Logo')
-        #buttons.bounceInUp
-          .facebook.button
-            i.icon
-              i.icon-facebook
-            .slide
-              p
-                | facebook
-          .twitter.button
-            i.icon
-              i.icon-twitter
-            .slide
-              p
-                | twitter
-          .google.button
-            i.icon
-              i.icon-google-plus
-            .slide
-              p
-                | google+
-      aside.sidebar(role='complementary')
-      footer.footer(role='contentinfo')
-      script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
-      script.
-        window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.2.min.js"><\\/script>');
-      script(src='assets/js/scripts.min.js')
-      script.
-        (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-        (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-        l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-XXXXXXXX-XX');
-        ga('send', 'pageview');
+    meta(charset='utf-8')
+    title FireShell by @toddmotto
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    link(href='//www.google-analytics.com', rel='dns-prefetch')
+    link(href='//ajax.googleapis.com', rel='dns-prefetch')
+    link(href='assets/css/style.min.css', rel='stylesheet')
+    script(src='assets/js/vendor/modernizr-2.6.2.min.js')
+  body
+    canvas#burst
+    header.header(role='banner')
+    main.main(role='main')
+      .bubbles-container
+        i = 1
+        - while (i <= 3)
+          span.bubble(class='bubble-#{i}')
+          - i++
+      p.app-title BEER ME BRO
+      .logo
+        a(href='/')
+          img(class="mug mug-1", src='assets/img/beer_mug.png', alt='Logo')
+          img(class="mug mug-2", src='assets/img/beer_mug.png', alt='Logo')
+      #buttons.bounceInUp
+        .facebook.button
+          i.icon
+            i.icon-facebook
+          .slide
+            p
+              | facebook
+        .twitter.button
+          i.icon
+            i.icon-twitter
+          .slide
+            p
+              | twitter
+        .google.button
+          i.icon
+            i.icon-google-plus
+          .slide
+            p
+              | google+
+    aside.sidebar(role='complementary')
+    footer.footer(role='contentinfo')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.2.min.js"><\\/script>');
+    script(src='assets/js/scripts.min.js')
+    script.
+      (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
+      (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
+      l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXXXXXX-XX');
+      ga('send', 'pageview');
