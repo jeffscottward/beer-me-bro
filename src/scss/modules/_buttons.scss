@@ -12,7 +12,6 @@
 }
 
 .button {
-    background: #DCE0E0;
     position: relative;
     display: block;
     height: 40px;
@@ -20,6 +19,7 @@
     overflow: hidden;
     width: 200px;
     cursor: pointer;
+    border-radius: 10px;
 
     &:last-child {
       margin-bottom: 0;
@@ -29,12 +29,23 @@
 .icon {
     display: block;
     float: left;
-    position: relative;
     z-index: 3;
     height: 100%;
     vertical-align: top;
     width: 38px;
     text-align: center;
+
+    &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        height: 70%;
+        width: 1px;
+        background: hsl(0, 100%, 100%);
+        z-index: 5;
+        top: 15%;
+        left: 18%;
+    }
 }
 
 .icon i {
@@ -48,7 +59,6 @@
     margin: 0;
     height: 100%;
     left: 38px;
-    position: absolute;
     width: 100%;
 }
 
@@ -85,4 +95,18 @@
 
 .google .icon, .google .slide {
     background: #d24228;
+}
+
+.facebook .icon,
+.twitter .icon,
+.google .icon {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; 
+}
+
+.facebook .slide,
+.twitter .slide,
+.google .slide {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; 
 }

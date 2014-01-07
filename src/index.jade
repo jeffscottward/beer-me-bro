@@ -9,40 +9,43 @@ html.no-js
     link(href='//www.google-analytics.com', rel='dns-prefetch')
     link(href='//ajax.googleapis.com', rel='dns-prefetch')
     link(href='assets/css/style.min.css', rel='stylesheet')
+    link(href='bower_components/animate.css/animate.css', rel='stylesheet')
     script(src='assets/js/vendor/modernizr-2.6.2.min.js')
   body
-    canvas#burst
+    //canvas#burst
     header.header(role='banner')
     main.main(role='main')
-      .bubbles-container
-        i = 1
-        - while (i <= 3)
-          span.bubble(class='bubble-#{i}')
-          - i++
-      p.app-title BEER ME BRO
-      .logo
-        a(href='/')
-          img(class="mug mug-1", src='assets/img/beer_mug.png', alt='Logo')
-          img(class="mug mug-2", src='assets/img/beer_mug.png', alt='Logo')
-      #buttons.bounceInUp
-        .facebook.button
-          i.icon
-            i.icon-facebook
-          .slide
-            p
-              | facebook
-        .twitter.button
-          i.icon
-            i.icon-twitter
-          .slide
-            p
-              | twitter
-        .google.button
-          i.icon
-            i.icon-google-plus
-          .slide
-            p
-              | google+
+      //- .bubbles-container
+      //-   i = 1
+      //-   - while (i <= 3)
+      //-     span.bubble(class='bubble-#{i}')
+      //-     - i++
+      .screen.splash
+        p.app-title BEER ME BRO
+      .screen.home
+      //- .logo
+      //-   a(href='/')
+      //-     img(class="mug mug-1", src='assets/img/beer_mug.png', alt='Logo')
+      //-     img(class="mug mug-2", src='assets/img/beer_mug.png', alt='Logo')
+      //#buttons.bounceInUp
+        //- .facebook.button
+        //-   i.icon
+        //-     i.icon-facebook
+        //-   .slide
+        //-     p
+        //-       | facebook
+        //- .twitter.button
+        //-   i.icon
+        //-     i.icon-twitter
+        //-   .slide
+        //-     p
+        //-       | twitter
+        //- .google.button
+        //-   i.icon
+        //-     i.icon-google-plus
+        //-   .slide
+        //-     p
+        //-       | google+
     aside.sidebar(role='complementary')
     footer.footer(role='contentinfo')
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
