@@ -1,11 +1,12 @@
 .main {
-	
+
 }
 
 .logo {
 	display: block;
 	position: relative;
 	margin: auto;
+	@include vendor(transform,scale(.8));
 
 	a{
 		width: 100%;

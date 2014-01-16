@@ -1,0 +1,45 @@
+mixin header()
+  header.header(role='banner')
+    .menu-btn
+    p.app-title BEER ME BRO
+
+mixin sidebar()
+  aside.sidebar(role='complementary')
+    nav
+      ul
+        li
+          a 
+            p Dashboard
+        li
+          a 
+            p Beer a Bro
+        li
+          a 
+            p Beer Request
+        li
+          a 
+            p Beers You Owe
+        li
+          a 
+            p Beers Owed to You
+
+mixin login-buttons()
+  #login-buttons
+    .facebook.button
+      i.icon
+        i.icon-facebook
+      .slide
+        p
+          | facebook
+    .twitter.button
+      i.icon
+        i.icon-twitter
+      .slide
+        p
+          | twitter
+    .google.button
+      i.icon
+        i.icon-google-plus
+      .slide
+        p
+          | google+

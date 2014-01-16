@@ -72,6 +72,7 @@
     };
 
     window.appInstance = new BMBAPP();
+    appInstance.screen().goToScreen('splash')
 
   });
 

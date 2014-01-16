@@ -49,7 +49,7 @@
 //----------------------------------*/
 
 @import 'vendor/_external.scss';
-//@import 'backgrounds/_sunburst.scss';
+@import 'backgrounds/_sunburst.scss';
 
 html, body{
 	display: block;
@@ -61,10 +61,4 @@ html, body{
 
 main, .main{
   height: 100%;
-}
-
-nav {
-  position: absolute;
-  top: 20%;
-  left: 25%; 
 }

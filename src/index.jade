@@ -1,3 +1,5 @@
+include mixins
+
 !!! 5
 html.no-js
   head
@@ -12,42 +14,80 @@ html.no-js
     link(href='bower_components/animate.css/animate.css', rel='stylesheet')
     script(src='assets/js/vendor/modernizr-2.6.2.min.js')
   body
-    //canvas#burst
-    header.header(role='banner')
     main.main(role='main')
-      //- .bubbles-container
-      //-   i = 1
-      //-   - while (i <= 3)
-      //-     span.bubble(class='bubble-#{i}')
-      //-     - i++
       .screen.splash
         p.app-title BEER ME BRO
       .screen.home
-      //- .logo
-      //-   a(href='/')
-      //-     img(class="mug mug-1", src='assets/img/beer_mug.png', alt='Logo')
-      //-     img(class="mug mug-2", src='assets/img/beer_mug.png', alt='Logo')
-      //#buttons.bounceInUp
-        //- .facebook.button
-        //-   i.icon
-        //-     i.icon-facebook
-        //-   .slide
-        //-     p
-        //-       | facebook
-        //- .twitter.button
-        //-   i.icon
-        //-     i.icon-twitter
-        //-   .slide
-        //-     p
-        //-       | twitter
-        //- .google.button
-        //-   i.icon
-        //-     i.icon-google-plus
-        //-   .slide
-        //-     p
-        //-       | google+
-    aside.sidebar(role='complementary')
-    footer.footer(role='contentinfo')
+        canvas#burst
+        .logo
+          a(href='/')
+            img(class="mug mug-1", src='assets/img/beer_mug.png', alt='Logo')
+            img(class="mug mug-2", src='assets/img/beer_mug.png', alt='Logo')
+        +login-buttons()
+      .screen.dashboard
+        +header()
+        +sidebar()
+        .dashboard-body
+          .view.beers-tracker
+            .beers-you-owe
+              h2.view-title Beers You Owe
+              ul
+                li
+                  img(src="pictureOfFriend.png")
+                  .beers-owed 4
+                li
+                  img(src="pictureOfFriend.png")
+                  .beers-owed 3
+                li
+                  img(src="pictureOfFriend.png")
+                  .beers-owed 2
+                li
+                  img(src="pictureOfFriend.png")
+                  .beers-owed 1
+              button.beer-action Beer Your Bro
+            .beers-you-are-owed
+              h2.view-title Beers You're Owed
+              ul
+                li
+                  img(src="pictureOfFriend.png")
+                  .beers-owed 2
+                li
+                  img(src="pictureOfFriend.png")
+                  .beers-owed 1
+                li
+                  img(src="pictureOfFriend.png")
+                  .beers-owed 1
+              button.beer-action Beer Me Bro
+          .view.give-request
+            h1.view-title Give / Request
+            form.give-request-form(name="give-request-form")
+              .friend-select
+                select
+                  option(value="friend1") friend1
+                  option(value="friend2") friend2
+                  option(value="friend3") friend3
+                  option(value="friend4") friend4
+              .beer-count
+                input(type='number', name='user')
+                label Beers
+              .reason
+                label For: 
+                  span (optional)
+                select
+                  option(value="Birthday") Birthday
+                  option(value="Being a Dickhead") Being a Dickhead
+                  option(value="Feeling Generous") Feeling Generous
+              .kind
+                label Kind: 
+                  span (optional)
+                select
+                  option(value="Lager") Lager
+                  option(value="IPA") IPA
+                  option(value="Stout") Stout
+              input(type='submit', value='Beer Bro')
+          .view.social-share
+            img(src="success.png")
+            button.share Share Bromance
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script.
       window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.2.min.js"><\\/script>');
