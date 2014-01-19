@@ -24,7 +24,7 @@
 	}
 	.mug-1{
 		position: absolute;
-		left: 0px;
+		right: 50%;
 		@include vendor(transform,scaleX(-1) rotate(-20deg));
 	}
 	.mug-2{
