@@ -33,29 +33,29 @@ html.no-js
               h2.view-title Beers You Owe
               ul
                 li
-                  img(src="pictureOfFriend.png")
+                  img(src="assets/img/pictureOfFriend.png")
                   .beers-owed 4
                 li
-                  img(src="pictureOfFriend.png")
+                  img(src="assets/img/pictureOfFriend.png")
                   .beers-owed 3
                 li
-                  img(src="pictureOfFriend.png")
+                  img(src="assets/img/pictureOfFriend.png")
                   .beers-owed 2
                 li
-                  img(src="pictureOfFriend.png")
+                  img(src="assets/img/pictureOfFriend.png")
                   .beers-owed 1
               button.beer-action Beer Your Bro
             .beers-you-are-owed
               h2.view-title Beers You're Owed
               ul
                 li
-                  img(src="pictureOfFriend.png")
+                  img(src="assets/img/pictureOfFriend.png")
                   .beers-owed 2
                 li
-                  img(src="pictureOfFriend.png")
+                  img(src="assets/img/pictureOfFriend.png")
                   .beers-owed 1
                 li
-                  img(src="pictureOfFriend.png")
+                  img(src="assets/img/pictureOfFriend.png")
                   .beers-owed 1
               button.beer-action Beer Me Bro
           .view.give-request
@@ -63,30 +63,30 @@ html.no-js
             form.give-request-form(name="give-request-form")
               .friend-select
                 select
-                  option(value="friend1") friend1
-                  option(value="friend2") friend2
-                  option(value="friend3") friend3
-                  option(value="friend4") friend4
+                  option(value="Friend1") Friend 1
+                  option(value="Friend2") Friend 2
+                  option(value="Friend3") Friend 3
+                  option(value="Friend4") Friend 4
               .beer-count
-                input(type='number', name='user')
+                input(type='number', name='user', placeholder="2")
                 label Beers
               .reason
-                label For: 
-                  span (optional)
+                label For 
+                  span (optional): 
                 select
                   option(value="Birthday") Birthday
                   option(value="Being a Dickhead") Being a Dickhead
                   option(value="Feeling Generous") Feeling Generous
               .kind
-                label Kind: 
-                  span (optional)
+                label Kind 
+                  span (optional): 
                 select
                   option(value="Lager") Lager
                   option(value="IPA") IPA
                   option(value="Stout") Stout
-              input(type='submit', value='Beer Bro')
+              input.beer-bro-submit(type='submit', value='Beer Bro')
           .view.social-share
-            img(src="success.png")
+            img(src="assets/img/success.png")
             button.share Share Bromance
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script.

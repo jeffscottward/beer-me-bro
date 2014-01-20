@@ -7,16 +7,23 @@
     var BMBAPP = function(){
 
       this.data = {
-        currentScreen: 'undefined'  
+        currentScreen: 'undefined',  
+        currentView: 'undefined'
       };
 
       this.dom = {
         screen: {
-          collection: $('.screen')
+          collection: $('.screen'),
+          view: $('.view'),
+          attachListeners: function (e) {
+            $('.beer-action').click(function(){
+              window.appInstance.view().goToView('give-request');
+            });
+          }
         }
       };
 
-      this.screen = function(){
+      this.screen = function() {
 
         var thatData = this.data;
         var thatDom = this.dom;
@@ -69,11 +76,74 @@
 
       };
 
+      this.view = function() {
+
+        var thatData = this.data;
+        var thatDom = this.dom;
+
+        function getView(viewName) {
+          return thatDom.screen.view.filter( '.' + viewName );
+        }
+
+        function getCurrentView() {
+          return thatData.currentView;
+        }
+
+        function updateViewStatus(viewName) {
+          thatData.currentView = viewName;
+        }
+
+        function clearAllViews() {
+          updateViewStatus('undefined');
+          thatDom.screen.view.removeClass('-active-view');
+        }
+
+        function turnOffView(viewName) {
+          updateViewStatus('undefined');
+          getView(viewName).removeClass('-active-view');
+        }
+
+        function turnOnView(viewName) {
+          updateViewStatus(viewName);
+          getView(viewName).addClass('-active-view');
+        }
+        
+        function goToView(viewName){
+          clearAllViews();
+          updateViewStatus(viewName);
+          turnOnView(viewName);
+          console.log('--current View: ' + getCurrentView());
+        }
+
+        return {
+
+          getView: getView,
+          getCurrentView: getCurrentView,
+          updateViewStatus: updateViewStatus,
+          clearAllViews: clearAllViews,
+          turnOffView: turnOffView,
+          turnOnView: turnOnView,
+          goToView: goToView
+
+        };
+
+      };
+
     };
 
     window.appInstance = new BMBAPP();
-    appInstance.screen().goToScreen('splash')
+    window.appInstance.dom.screen.attachListeners();
+    window.appInstance.screen().goToScreen('splash');
 
+    setTimeout(function(){
+      window.appInstance.screen().goToScreen('home');
+    }, 2000);
+
+    setTimeout(function(){
+      window.appInstance.screen().goToScreen('dashboard');
+      window.appInstance.view().goToView('beers-tracker');
+    }, 4000);
+    
   });
 
 })(jQuery, window, document);

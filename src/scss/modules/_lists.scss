@@ -1,0 +1,22 @@
+.friend-select select{
+  min-height: 30px;
+  border: none;
+  background: $baseColor;
+  -webkit-appearance: none;
+  padding-left: 10px;
+  color: white;
+  position: relative;
+  
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid white;
+  }
+}
