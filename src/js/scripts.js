@@ -15,7 +15,7 @@
         screen: {
           collection: $('.screen'),
           view: $('.view'),
-          attachListeners: function (e) {
+          attachListeners: function () {
             $('.beer-action').click(function(){
               window.appInstance.view().goToView('give-request');
             });
